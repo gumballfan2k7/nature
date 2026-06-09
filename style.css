@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* --- "Skip to Main Content" Link --- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: top 0.3s ease;
+}
+
+/* Visible only when focused via Keyboard Tab */
+.skip-link:focus {
+  top: 10px;
+}
+
+/* --- Navigation Styling (Flexbox) --- */
+header {
+  background-color: #2c3e50;
+  padding: 15px 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* 3+ CSS Properties used for styling links */
+.nav-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease; /* For smooth hover transition */
+}
+
+/* Interactive Hover State with Transition */
+.nav-links a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(26, 188, 156, 0.4);
+}
+
+/* Main Layout Wrapper */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* --- Grid Layout (Used on Gallery Page) --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* At least 2 columns, scales up */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* --- Box Model Image Styling --- */
+.box-styled-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* Box Model Requirements: */
+  border: 5px solid #2c3e50;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.box-styled-img:hover {
+  transform: scale(1.03);
+}
+
+.grid-container .grid-item:nth-child(even) .box-styled-img {
+  border-color: #1abc9c;
+  border-radius: 50px 10px 50px 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  margin-top: 40px;
+}
